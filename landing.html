@@ -1,0 +1,50 @@
+<html  lang="en" ng-app="weatherApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Angular Weather App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Weather App</a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container main-content" ng-controller="WeatherController">
+            <div class="flex-box">
+                <div class="address-box">
+                    <h3 ng-cloak>{{location}}</h3>
+                </div>
+                <div class="weather-box">
+                    <h3 ng-cloak>{{weather}}</h3>
+                </div>
+                <form>
+                    <div class="form-group" >
+                        <label for="location">Please enter your zip code or city and state.</label>
+                        <input class="form-control" 
+                                id="location" 
+                                type="text" 
+                                name="locaton" 
+                                placeholder="96817...Honolulu, HI" 
+                                ng-model="location">
+                    </div>
+                    <button class="btn btn-danger center"
+                            id="main-button"
+                            ng-click="getLocation()">Get Weather</button>
+                </form>
+            </div>
+            <button class="btn btn-danger"
+                        id="clear-button"
+                        ng-click="">Clear</button>
+        </div>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+        <script type="text/javascript" src="weatherApp.js"></script>
+        <script type="text/javascript" src="WeatherController.js"></script>
+    </body>
+</html>

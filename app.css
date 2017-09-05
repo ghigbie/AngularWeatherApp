@@ -1,0 +1,34 @@
+body{
+    background: #d9dce0;
+}
+
+.flex-box{
+    /*background: #f7f7f7;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+}
+.hidden{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.center{
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#main-button{
+    
+}
+
+#clear-button{
+    float: right;
+    margin-bottom: 5%;
+}
