@@ -43,6 +43,7 @@
         };
     };
     
+    WeatherController.$inject = ['$scope'];
     
     angular.module('weatherApp')
         .controller('WeatherController', WeatherController);
